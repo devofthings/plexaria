@@ -1,0 +1,19 @@
+Description=mounts the gdrive folders into the media folders with rclone
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/rclone mount \
+        gcrypt:/Series /media/gdrive/gSeries
+        --allow-other
+        --dir-cache-time 48h
+        --vfs-read-chunk-size 32M
+        --vfs-read-chunk-size-limit 2G
+        --buffer-size 512M
+        --daemon
+ExecStop=/bin/fusermount -u gcrypt:/Series
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=default.target

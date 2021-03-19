@@ -18,14 +18,10 @@ echo "-----------------------------------------"
 sleep 1
 
 #download required packages and other stuff
-echo -e "\033[31mupdate package list and get rclone and docker"
+echo -e "\033[31mupdate package list and get rclone"
 sleep 1
 apt update -y
-apt install rclone docker.io -y
-docker pull linuxserver/plex
-docker pull linuxserver/letsencrypt
-docker pull jlesage/jdownloader-2
-docker pull nextcloud:stable-apache
+apt install rclone -y
 
 #create essential media folders
 echo -e "\033[31mcreating media folders"
