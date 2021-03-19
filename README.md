@@ -6,4 +6,7 @@
  / .___/_/\___/_/|_|\__,_/_/  /_/\__,_/  
 /_/                                      
 ```
-this project let you create a server with plex, nextcloud and a jdownloader in no time. 🏴‍☠️
+this project let you create a server with plex, an encrypted gdrive storage and a jdownloader in no time. 🏴‍☠️
+
+
+this is still a work in progress project
