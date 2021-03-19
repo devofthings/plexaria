@@ -49,6 +49,5 @@ echo -e "\033[31msecond password:" $second_password
 echo -e "\033[37mmake sure that you don't lose these passwords!"
 sleep 1
 
-rclone config create "gcrypt" "crypt" remote "gdrive:" filename_encryption "standard" directory_name_encryption "true" password '$first_password' password2 '$second_password'
-
+rclone config create "gcrypt" "crypt" remote "gdrive:" filename_encryption "standard" directory_name_encryption "true" password $first_password password2 $second_password --no-obscure
 echo -e "\033[37mdone."
